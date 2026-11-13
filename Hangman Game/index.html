@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>HANGMAN</h1>
+    <h2>VANILLA JAVASCRIPT HANGMAN GAME</h2>
+
+    <p class="instrucciones">Use the alphabet below to guess the word, or click hint to get a clue.</p>
+
+    <section id="letras">
+        <button id="letraA">a</button>
+        <button id="letraB">b</button>
+        <button id="letraC">c</button>
+        <button id="letraD">d</button>
+        <button id="letraE">e</button>
+        <button id="letraF">f</button>
+        <button id="letraG">g</button>
+        <button id="letraH">h</button>
+        <button id="letraI">i</button>
+        <button id="letraJ">j</button>
+        <button id="letraK">k</button>
+        <button id="letraL">l</button>
+        <button id="letraM">m</button>
+        <button id="letraN">n</button>
+        <button id="letraO">o</button>
+        <button id="letraP">p</button>
+        <button id="letraQ">q</button>
+        <button id="letraR">r</button>
+        <button id="letraS">s</button>
+        <button id="letraT">t</button>
+        <button id="letraU">u</button>
+        <button id="letraV">v</button>
+        <button id="letraW">w</button>
+        <button id="letraX">x</button>
+        <button id="letraY">y</button>
+        <button id="letraZ">z</button>
+    </section>
+
+    <p class="categoria">The Chosen Category Is Cities</p>
+
+    <!-- Añadido el contenedor para la palabra a adivinar -->
+    <div id="palabra-oculta">- - - - - - -</div>
+
+    <!-- Corregida la anidación usando un span -->
+    <p id="lives-container">You have <span id="lives">10</span> lives</p>
+
+    <script src="script.js"></script>
+</body>
+</html>
