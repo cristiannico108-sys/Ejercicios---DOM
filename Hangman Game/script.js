@@ -28,7 +28,7 @@ function iniciarJuego() {
     letrasAdivinadas = [];
     vidasDisplay.textContent = vidas;
     
-    // 3. Deshabilito todos los botones visualmente
+    // 3. Rehabilito todos los botones visualmente
     botonesLetras.forEach(boton => {
         boton.disabled = false;
         boton.style.opacity = "1";
@@ -54,16 +54,16 @@ function actualizarPalabraOculta() {
             // Si la letra ya fue adivinada, la mostramos
             textoMostrar += letra + " ";
         } else {
-            // Si no, mostramos un guion
+            // Si no, muestro un guion
             textoMostrar += "_ ";
             victoria = false; // Como hay un guion, aún no ha ganado
         }
     }
 
-    // Imprimimos el texto en pantalla (trim() quita el espacio final sobrante)
+    // Imprimo el texto en pantalla
     palabraOcultaDisplay.textContent = textoMostrar.trim();
 
-    // Comprobar si ya no quedan guiones
+    // Compruebo si ya no quedan guiones
     if (victoria) {
         finDelJuego(true);
     }
@@ -73,21 +73,20 @@ function actualizarPalabraOculta() {
         LÓGICA AL PULSAR UNA LETRA
 =======================================*/
 function comprobarLetra(evento) {
-    // evento.target nos dice exactamente qué botón HTML se hizo clic
     const boton = evento.target; 
-    const letraPulsada = boton.textContent.toUpperCase();
+    const letraPulsada = boton.textContent.trim().toUpperCase();
 
-    // Desactivamos el botón para que no se pueda pulsar dos veces
+    // Desactivo el botón para que no se pueda pulsar dos veces
     boton.disabled = true;
     boton.style.opacity = "0.4";
     boton.style.cursor = "default";
 
-    // ¿La palabra contiene la letra que hemos pulsado?
+    // Contiene la letra que se ha pulsado?
     if (palabraElegida.includes(letraPulsada)) {
         letrasAdivinadas.push(letraPulsada);
         actualizarPalabraOculta();
     } else {
-        // Fallo: restamos una vida
+        // Fallo --> resto una vida
         vidas--;
         vidasDisplay.textContent = vidas;
         
