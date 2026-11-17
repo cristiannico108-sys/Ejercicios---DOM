@@ -12,7 +12,7 @@ let letrasAdivinadas = [];
 ===================================*/
 const palabraOcultaDisplay = document.getElementById("palabra-oculta");
 const vidasDisplay = document.getElementById("lives");
-// Captura todos los botones de letras de una sola vez
+// Capturar todos los botones de letras de una sola vez
 const botonesLetras = document.querySelectorAll("#letras button");
 
 /*=====================================
